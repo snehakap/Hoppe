@@ -2,6 +2,7 @@ import { Outlet, Link, useLocation } from "react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Footer } from "./Footer";
+import { ScrollToTop } from "./ScrollToTop";
 
 export function Layout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,6 +25,7 @@ export function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#020617] via-[#020617] to-[#0b1220] text-slate-200">
+       <ScrollToTop />
 
       {/* ================= HEADER ================= */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
@@ -33,9 +35,9 @@ export function Layout() {
           {/* Logo CENTER */}
           <Link to="/" className="flex justify-center mb-4">
             <img
-              src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1777993319/Gecko-Hoppe-080425-RZ06-Chrome_3D_und_grey_TxT_gruen-HQ-150725_vukh7q.jpg"
+              src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1778003555/Gecko-Hoppe-080425-RZ06-Chrome_3D_und_grey_TxT_gruen-HQ-150725_lfv9ql.jpg"
               alt="Hoppe Logo"
-              className="w-[300px] h-25 object-fill"
+              className="w-[350px] h-25 object-fill"
             />
           </Link>
 
@@ -45,11 +47,11 @@ export function Layout() {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-base md:text-lg tracking-wide transition-all duration-200 pb-1 ${
-                  isActive(item.href)
-  ? "text-green-500 border-b border-green-500"
-  : "text-slate-400 hover:text-green-500"
-                }`}
+                className={`text-base md:text-lg tracking-wide transition-all duration-300 pb-1 ${
+  isActive(item.href)
+    ? "text-[#00A651] border-b border-[#00A651]"
+    : "text-[#6e6e6e] hover:text-[#00A651]"
+}`}
               >
                 {item.name}
               </Link>
@@ -82,8 +84,8 @@ export function Layout() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block py-2 text-base transition ${
                     isActive(item.href)
-                      ? "text-slate-300"
-                      : "text-slate-400 hover:text-white"
+  ? "text-[#00A651]"
+  : "text-[#6e6e6e] hover:text-[#00A651]"
                   }`}
                 >
                   {item.name}
