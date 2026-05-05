@@ -30,7 +30,7 @@ export function Layout() {
       {/* ================= HEADER ================= */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
         
-        <div className="max-w-7xl mx-auto px-6 py-4 text-center">
+        <div className="max-w-7xl mx-auto px-6 py-2 text-center">
 
           {/* Logo CENTER */}
           <Link to="/" className="flex justify-center mb-4">
