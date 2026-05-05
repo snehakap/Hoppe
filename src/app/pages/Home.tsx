@@ -10,7 +10,7 @@ export function Home() {
         {/* Background Image */}
         {/* Background Image */}
 <img
-  src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1777671427/hero_dpygut.jpg"
+  src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1777993319/Gecko-Hoppe-080425-RZ06-Chrome_3D_und_grey_TxT_gruen-HQ-150725_vukh7q.jpg"
   alt="Hero"
   className="absolute inset-0 w-full h-full object-cover object-[center_80%]"
 />
