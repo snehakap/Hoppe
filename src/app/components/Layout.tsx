@@ -26,7 +26,7 @@ export function Layout() {
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#020617] via-[#020617] to-[#0b1220] text-slate-200">
 
       {/* ================= HEADER ================= */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
         
         <div className="max-w-7xl mx-auto px-6 py-4 text-center">
 
