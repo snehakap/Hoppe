@@ -5,13 +5,13 @@ export function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
+      <section className="relative h-[65vh] min-h-[400px] overflow-hidden">
   
   {/* Image ONLY (no overlays, no gaps) */}
   <img
     src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1778004277/a0baa8e5-6e13-49e7-a664-bb560f8d04a5_h46gqu.jpg"
     alt="Hero"
-    className="w-full h-full object-cover object-[center_12%]"
+    className="w-full h-full object-cover object-[center_10%]"
   />
 
 
@@ -62,7 +62,7 @@ export function Home() {
 </section>
 
       
-<section className="py-22 bg-[#fafafa]">
+<section className="py-15 bg-[#fafafa]">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
     {/* Heading */}
