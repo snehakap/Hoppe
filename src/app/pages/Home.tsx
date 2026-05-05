@@ -5,88 +5,64 @@ export function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        
-        {/* Background Image */}
-        {/* Background Image */}
-<img
-  src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1777993319/Gecko-Hoppe-080425-RZ06-Chrome_3D_und_grey_TxT_gruen-HQ-150725_vukh7q.jpg"
-  alt="Hero"
-  className="absolute inset-0 w-full h-full object-cover object-[center_80%]"
-/>
+      <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
+  
+  {/* Image ONLY (no overlays, no gaps) */}
+  <img
+    src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1778004277/a0baa8e5-6e13-49e7-a664-bb560f8d04a5_h46gqu.jpg"
+    alt="Hero"
+    className="w-full h-full object-cover object-[center_12%]"
+  />
 
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/20"></div>
 
-        {/* Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-              backgroundSize: "40px 40px",
-            }}
-          ></div>
-        </div>
+  {/* Pattern Overlay */}
+  <div className="absolute inset-0 opacity-10">
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
+        backgroundSize: "40px 40px",
+      }}
+    />
+  </div>
 
-        {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center animate-fadeIn">
-        
-        {/* Title */}
-        <h1 className="text-5xl md:text-7xl font-semibold mb-6 tracking-tight 
-text-transparent bg-clip-text 
-bg-gradient-to-r from-green-400 via-slate-200 to-green-600
-drop-shadow-[0_6px_25px_rgba(0,0,0,0.9)]
-[font-family:'Playfair_Display',serif]">
-  Hoppe Terrarienbau
-</h1>
+  {/* Content (currently empty) */}
+  <div className="relative z-10" />
 
-        {/* Subtitle */}
-        {/* <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto 
-text-slate-200 font-medium 
-drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]
-[font-family:'Poppins',sans-serif]">
-  Hochwertige Terrarien mit einzigartiger Landschaftsgestaltung
-</p> */}
+  {/* Buttons (commented out as requested) */}
+  {/*
+  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <Link
+      to="/products"
+      className="group px-8 py-4 rounded-lg font-medium flex items-center justify-center gap-2 
+      bg-gradient-to-r from-slate-200 to-white text-slate-900
+      shadow-lg transition-all duration-300
+      hover:scale-105 
+      hover:shadow-[0_10px_30px_rgba(0,255,150,0.4)]
+      hover:from-green-400 hover:to-green-500 hover:text-black"
+    >
+      Explore Collections
+    </Link>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          
-          {/* Primary Button */}
-          <Link
-            to="/products"
-            className="group px-8 py-4 rounded-lg font-medium flex items-center justify-center gap-2 
-            bg-gradient-to-r from-slate-200 to-white text-slate-900
-            shadow-lg transition-all duration-300
-            hover:scale-105 
-            hover:shadow-[0_10px_30px_rgba(0,255,150,0.4)]
-            hover:from-green-400 hover:to-green-500 hover:text-black"
-          >
-            Explore Collections
-            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
-
-          {/* Secondary Button */}
-          <Link
-            to="/contact"
-            className="px-8 py-4 rounded-lg font-medium 
-            border-2 border-white text-white 
-            backdrop-blur-sm transition-all duration-300
-            hover:scale-105
-            hover:bg-green-500/20 
-            hover:border-green-400 
-            hover:shadow-[0_0_20px_rgba(0,255,150,0.5)]"
-          >
-            Request Consultation
-          </Link>
-
-        </div>
-      </div>
-    </section>
+    <Link
+      to="/contact"
+      className="px-8 py-4 rounded-lg font-medium 
+      border-2 border-white text-white 
+      backdrop-blur-sm transition-all duration-300
+      hover:scale-105
+      hover:bg-green-500/20 
+      hover:border-green-400 
+      hover:shadow-[0_0_20px_rgba(0,255,150,0.5)]"
+    >
+      Request Consultation
+    </Link>
+  </div>
+  */}
+</section>
 
       
-<section className="py-28 bg-white">
+<section className="py-22 bg-[#fafafa]">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
     {/* Heading */}
