@@ -35,7 +35,7 @@ export function Layout() {
             <img
               src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1777993319/Gecko-Hoppe-080425-RZ06-Chrome_3D_und_grey_TxT_gruen-HQ-150725_vukh7q.jpg"
               alt="Hoppe Logo"
-              className="w-[350px] h-30 object-fill"
+              className="w-[300px] h-25 object-fill"
             />
           </Link>
 
