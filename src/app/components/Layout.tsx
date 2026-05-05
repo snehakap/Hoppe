@@ -33,7 +33,7 @@ export function Layout() {
           {/* Logo CENTER */}
           <Link to="/" className="flex justify-center mb-4">
             <img
-              src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1777748382/Hoppe-Logo-e1771438045745_d9ciyq.png"
+              src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1777993319/Gecko-Hoppe-080425-RZ06-Chrome_3D_und_grey_TxT_gruen-HQ-150725_vukh7q.jpg"
               alt="Hoppe Logo"
               className="w-[150px] h-20 object-fill"
             />
