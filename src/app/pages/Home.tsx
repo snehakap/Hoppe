@@ -9,7 +9,7 @@ export function Home() {
   
   {/* Image ONLY (no overlays, no gaps) */}
   <img
-    src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1778004277/a0baa8e5-6e13-49e7-a664-bb560f8d04a5_h46gqu.jpg"
+    src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1777671427/hero_dpygut.jpg"
     alt="Hero"
     className="w-full h-full object-cover object-[center_10%]"
   />
