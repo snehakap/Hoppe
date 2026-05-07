@@ -28,74 +28,86 @@ export function Layout() {
        <ScrollToTop />
 
       {/* ================= HEADER ================= */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
-        
-        <div className="max-w-7xl mx-auto px-6 py-2 text-center">
+<nav className="fixed top-0 left-0 right-0 z-50 bg-[#00A86B] backdrop-blur-xl border-b border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+  
+  <div className="max-w-7xl mx-auto px-6 py-3">
 
-          {/* Logo CENTER */}
-          <Link to="/" className="flex justify-center mb-4">
-            <img
-              src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1778003555/Gecko-Hoppe-080425-RZ06-Chrome_3D_und_grey_TxT_gruen-HQ-150725_lfv9ql.jpg"
-              alt="Hoppe Logo"
-              className="w-[350px] h-25 object-fill"
-            />
+    {/* TOP BAR */}
+    <div className="relative flex items-center justify-between">
+
+      {/* LEFT LOGO */}
+      <Link to="/" className="flex items-center">
+        <img
+          src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1778003555/Gecko-Hoppe-080425-RZ06-Chrome_3D_und_grey_TxT_gruen-HQ-150725_lfv9ql.jpg"
+          alt="Hoppe Logo"
+          className="w-[220px] h-auto object-contain"
+        />
+      </Link>
+
+      {/* CENTER LOGO */}
+      <div className="absolute left-1/2 transform -translate-x-1/2">
+        <img
+          src="https://res.cloudinary.com/dyhc4jwuo/image/upload/v1778004277/a0baa8e5-6e13-49e7-a664-bb560f8d04a5_h46gqu.jpg"
+          alt="Center Logo"
+          className="w-[120px] h-auto object-contain"
+        />
+      </div>
+
+      {/* MOBILE MENU BUTTON */}
+      <div className="lg:hidden">
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="p-2 rounded-lg hover:bg-white/10 transition"
+        >
+          {mobileMenuOpen ? (
+            <X className="w-6 h-6 text-white" />
+          ) : (
+            <Menu className="w-6 h-6 text-white" />
+          )}
+        </button>
+      </div>
+    </div>
+
+    {/* Desktop Navigation */}
+    <div className="hidden lg:flex justify-center items-center gap-8 mt-4">
+      {navigation.map((item) => (
+        <Link
+          key={item.name}
+          to={item.href}
+          className={`text-base md:text-lg tracking-wide transition-all duration-300 pb-1 ${
+            isActive(item.href)
+              ? "text-white border-b border-white"
+              : "text-white/80 hover:text-white"
+          }`}
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+
+  {/* Mobile Navigation */}
+  {mobileMenuOpen && (
+    <div className="lg:hidden bg-[#008f5a] border-t border-white/10">
+      <div className="px-6 py-4 space-y-2 text-center">
+        {navigation.map((item) => (
+          <Link
+            key={item.name}
+            to={item.href}
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block py-2 text-base transition ${
+              isActive(item.href)
+                ? "text-white"
+                : "text-white/80 hover:text-white"
+            }`}
+          >
+            {item.name}
           </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex justify-center items-center gap-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`text-base md:text-lg tracking-wide transition-all duration-300 pb-1 ${
-  isActive(item.href)
-    ? "text-[#00A651] border-b border-[#00A651]"
-    : "text-[#6e6e6e] hover:text-[#00A651]"
-}`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden flex justify-center mt-2">
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg hover:bg-white/10 transition"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-white" />
-              ) : (
-                <Menu className="w-6 h-6 text-white" />
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#0f172a] border-t border-white/10">
-            <div className="px-6 py-4 space-y-2 text-center">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2 text-base transition ${
-                    isActive(item.href)
-  ? "text-[#00A651]"
-  : "text-[#6e6e6e] hover:text-[#00A651]"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </nav>
-
+        ))}
+      </div>
+    </div>
+  )}
+</nav>
       {/* ================= PAGE CONTENT ================= */}
       <main className="pt-36 flex-grow">
         <Outlet />
